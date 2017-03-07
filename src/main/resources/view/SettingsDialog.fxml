@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="235.0" prefWidth="600.0" styleClass="background" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8.0.45"
+            fx:controller="de.fkaiser.mailmanipulator.view.SettingsDialogController">
+    <children>
+        <GridPane AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <Label text="SMTP host"/>
+                <Label text="Port" GridPane.rowIndex="1"/>
+                <Label text="User" GridPane.rowIndex="2"/>
+                <Label text="Password" GridPane.rowIndex="3"/>
+                <TextField fx:id="smtpHostField" GridPane.columnIndex="1"/>
+                <TextField fx:id="smtpPortField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                <TextField fx:id="smtpUserField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                <PasswordField fx:id="smtpPassField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                <Label text="SOCKS5 host" GridPane.rowIndex="4"/>
+                <Label text="SOCKS5 port" GridPane.rowIndex="5"/>
+                <TextField fx:id="socksHostField" promptText="optional" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                <TextField fx:id="socksPortField" promptText="optional" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+            </children>
+        </GridPane>
+        <ButtonBar layoutX="395.0" layoutY="440.0" prefHeight="40.0" prefWidth="500.0" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0">
+            <buttons>
+                <Button defaultButton="true" mnemonicParsing="false" onAction="#handleOk" text="OK"/>
+                <Button fx:id="cancelButton" cancelButton="true" mnemonicParsing="false" onAction="#handleCancel" text="Cancel"/>
+            </buttons>
+        </ButtonBar>
+    </children>
+</AnchorPane>

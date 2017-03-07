@@ -1,0 +1,1 @@
+A simple JavaFX app to send manipulated emails based on JavaxMail
