@@ -93,7 +93,7 @@ public class SendMailController extends Task<Void> {
 
                 msg.setMessageId(this.mail.getId());
 
-                msg.setText(this.mail.getMessage(), "utf-8", "html");
+                msg.setText(this.mail.getMessage(), "utf-8", this.mail.getType());
 
                 msg.saveChanges();
 

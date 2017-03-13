@@ -24,6 +24,7 @@ public class Mail {
     private final StringProperty message;
     private SimpleStringProperty fromEmail;
     private SimpleStringProperty fromName;
+    private String type;
 
     public Mail() {
         this(null, null, null, null);
@@ -140,5 +141,13 @@ public class Mail {
 
     public StringProperty toProperty() {
         return this.to;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }

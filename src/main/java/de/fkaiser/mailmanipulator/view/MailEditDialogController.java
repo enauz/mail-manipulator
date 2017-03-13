@@ -4,6 +4,7 @@ import de.fkaiser.mailmanipulator.model.Mail;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -29,6 +30,9 @@ public class MailEditDialogController {
     private TextField statusField;
     @FXML
     private TextArea messageEditor;
+    @FXML
+    private ComboBox<String> type;
+
 
     private Stage dialogStage;
     private Mail mail;
@@ -89,6 +93,7 @@ public class MailEditDialogController {
             this.mail.setFromEmail(this.fromEmailField.getText());
             this.mail.setFromName(this.fromNameField.getText());
             this.mail.setId(this.idField.getText());
+            this.mail.setType(this.type.getValue());
 
             this.okClicked = true;
             this.dialogStage.close();
