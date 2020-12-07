@@ -18,8 +18,8 @@ import java.util.prefs.Preferences;
 
 public class SendMailController extends Task<Void> {
 
-    private RootLayoutController rootLayoutController;
-    private Mail mail;
+    private final RootLayoutController rootLayoutController;
+    private final Mail mail;
 
     public SendMailController(RootLayoutController rootLayoutController, Mail mail) {
 
@@ -65,6 +65,7 @@ public class SendMailController extends Task<Void> {
                 mailSettings.put("mail.smtp.port", prefs.get("smtpPort", null));
                 mailSettings.put("mail.smtp.auth", MailManipulatorConstants.SMTP_AUTH);
                 mailSettings.put("mail.smtp.starttls.enable", MailManipulatorConstants.SMTP_STARTTLS);
+                mailSettings.put("mail.smtp.localhost", "localhost");
 
                 Authenticator auth = new Authenticator() {
                     @Override
